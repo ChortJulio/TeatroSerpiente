@@ -1,0 +1,25 @@
+
+* {
+    background-color: #891f76;
+    background-color: #efe52a;
+    background-color: #ec6317;
+    background-color: #a5175b;
+    background-color: #c26ba8;
+}
+
+#titulo-principal{
+    font-size: 30px;
+    background-color: #a5175b;
+}
+
+div {
+    background-color: #efe52a;
+    border: 5px solid #891f76;
+    margin: 10px;
+}
+
+.container__parrafo{
+    background-color: #ec6317;
+}
+
+
