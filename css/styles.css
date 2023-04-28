@@ -1,25 +1,72 @@
 
 * {
-    background-color: #891f76;
-    background-color: #efe52a;
-    background-color: #ec6317;
-    background-color: #a5175b;
-    background-color: #c26ba8;
+    font-family: var(--main-font-family-poiret-one)
+}
+
+:root{
+    --main-color-purple: #891f76;
+    --main-color-yellow: #efe52a;
+    --main-color-orange: #ec6317;
+    --main-color-darkred: #a5175b;
+    --main-color-pink: #c26ba8;
+    --main-font-family-big-shoulders-text: 'Big Shoulders Text', cursive;
+    --main-font-family-poiret-one: 'Poiret One', cursive;
+}
+
+body{
+    background-image: url("../images/_DSC9045.jpg");
+    background-size: 500px;
 }
 
 #titulo-principal{
-    font-size: 30px;
+    font-size: 70px;
     background-color: #a5175b;
+    color: var(--main-color-yellow);
+    font-family: var(--main-font-family-big-shoulders-text);
+    text-align: center;
 }
 
-div {
-    background-color: #efe52a;
-    border: 5px solid #891f76;
-    margin: 10px;
+.container__borde_caja{
+    width: 530px;
+    height: 185px;
+    border: 3px solid #641556;
+    padding: 10px;
+    margin: auto;
 }
 
-.container__parrafo{
-    background-color: #ec6317;
+.container__caja{
+    background-color: var(--main-color-yellow);
+    width: 500px;
+    text-align: center;
+    margin: auto;
 }
+
+#texto_caja_titulo{
+    background-color: var(--main-color-purple);
+    font-family: var(--main-font-family-big-shoulders-text);
+    font-size: 30px;
+    color: var(--main-color-yellow);
+    margin-bottom: 5px;
+    padding: 15px;
+}
+
+
+
+.texto_caja{
+    background-color: var(--main-color-yellow);
+    text-transform: uppercase;
+    font-family: var(--main-font-family-poiret-one);
+    font-size: 20px;
+    color: var(--main-color-purple);
+    padding: 10px;
+}
+
+.img-fondo{
+    width: 100px;
+    height: 100px;
+}
+
+
+
 
 
