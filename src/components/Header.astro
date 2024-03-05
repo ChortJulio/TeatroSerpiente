@@ -1,0 +1,63 @@
+---
+import Logo from "@components/Logo.astro";
+import Button from "@components/Button.astro";
+import HeaderLink from "@components/HeaderLink.astro";
+
+import MenuIcon from "@icons/Menu.astro";
+import CloseIcon from "@icons/Close.astro";
+---
+
+<header id="header-nav" class="fixed top-0 w-full px-6 py-4 z-50">
+  <div class="max-w-7xl mx-auto flex items-center justify-between gap-16">
+    <HeaderLink
+      checkActive={false}
+      href="/"
+      class="relative z-10"
+      aria-label="Logo"
+    >
+      <!-- <Logo
+        class="absolute w-10 m-auto blur-sm opacity-0 transition-opacity duration-300 hover:opacity-100"
+      />
+      <Logo class="w-10" /> -->
+      <img src="src/assets/logo.webp" alt="logo" class="w-24 h-24" />
+    </HeaderLink>
+    <nav
+      id="header-menu"
+      class="fixed w-full h-dvh inset-0 bg-[#151a36]/90 md:text-xl lg:text-xl flex flex-col items-center justify-center gap-8 -translate-y-full transition-transform duration-300 target:translate-y-0 md:static md:h-[initial] md:bg-[initial] md:flex-row md:translate-y-[initial]"
+    >
+      <HeaderLink class="text__glowing" href="/">Principal</HeaderLink>
+      <HeaderLink class="text__glowing" href="/">Historia</HeaderLink>
+      <HeaderLink class="text__glowing" href="/">Contacto</HeaderLink>
+      <Button
+        className="md:py-2 md:ml-auto md:text-base lg:text-base"
+        url="https://drive.google.com/file/d/1D7IvIqMyqAoG58fuk8bc0JvhAmrWBbOK/view"
+      >
+        Button
+      </Button>
+      <a href="#header-nav" class="md:hidden absolute top-6 right-6">
+        <CloseIcon />
+      </a>
+    </nav>
+    <a href="#header-menu" class="md:hidden"><MenuIcon /></a>
+  </div>
+</header>
+
+<!-- <header
+  id="header"
+  class="flex items-center justify-between p-4 bg-purple-primary"
+>
+  <img src="src/assets/logo.webp" alt="logo" class="w-24 h-24" />
+
+  <nav class="flex flex-grow justify-end">
+    <ul
+      class="flex items-center space-x-10 font-bold text-lg uppercase p-2 rounded-lg"
+    >
+      <li><a href="#" class="text-yellow-primary">Principal</a></li>
+      <li><a href="#">Quienes somos?</a></li>
+      <li><a href="#">Historia</a></li>
+      <li><a href="#">Actividades</a></li>
+      <li><a href="#">Otro</a></li>
+      <li><a href="#">Contacto</a></li>
+    </ul>
+  </nav>
+</header> -->
