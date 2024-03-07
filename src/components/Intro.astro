@@ -1,0 +1,68 @@
+---
+import Logo from "./Logo.astro";
+---
+
+<section class="flex text-xl text-left text-pretty my-24 items-center mx-48">
+  <div class="max-w-[70ch]">
+    <Logo class="w-16 text-white m-auto" />
+  </div>
+  <article>
+    <h1
+      class="text-4xl font-semibold text-center text-wrap mx-auto mb-10 tracking-wide uppercase"
+    >
+      Teatro Serpiente
+    </h1>
+    <h2 class="sec-text text-2xl font-semibold text-center mb-10">
+      ¡Cambiá la piel!
+    </h2>
+    <p>
+      Inscribite a nuestro teatro y descubrí el poder de la transformación. A
+      través de la actuación, la danza y la música, te ayudamos a <strong
+        >liberar tu creatividad y a expresarte de una manera auténtica.</strong
+      >
+    </p>
+  </article>
+</section>
+
+<script>
+  const text = document.querySelector(".sec-text");
+
+  const typeText = (
+    textElement: HTMLElement,
+    textToType: string,
+    delay: number
+  ) => {
+    let i = 0;
+    const intervalId = setInterval(() => {
+      if (i < textToType.length) {
+        textElement.textContent += textToType[i];
+        i++;
+      } else {
+        clearInterval(intervalId);
+      }
+    }, delay);
+  };
+
+  const Load = () => {
+    text!.textContent = "";
+    setTimeout(() => {
+      text!.textContent = "";
+      typeText(text as HTMLElement, "¡Cambiá la piel!", 100);
+    }, 0);
+    setTimeout(() => {
+      text!.textContent = "";
+      typeText(text as HTMLElement, "Inscribite al teatro", 100);
+    }, 4000);
+    setTimeout(() => {
+      text!.textContent = "";
+      typeText(
+        text as HTMLElement,
+        "¡Descubrí el poder de la transformación!",
+        100
+      );
+    }, 7000);
+  };
+
+  Load();
+  setInterval(Load, 12000);
+</script>
