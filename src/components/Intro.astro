@@ -2,7 +2,10 @@
 import Logo from "./Logo.astro";
 ---
 
-<section class="flex text-xl text-left text-pretty my-24 items-center mx-48">
+<section
+  id="principal"
+  class="flex text-xl text-left text-pretty my-24 items-center mx-48"
+>
   <div class="max-w-[70ch]">
     <Logo class="w-16 text-white m-auto" />
   </div>
@@ -51,7 +54,7 @@ import Logo from "./Logo.astro";
     }, 0);
     setTimeout(() => {
       text!.textContent = "";
-      typeText(text as HTMLElement, "Inscribite al teatro", 100);
+      typeText(text as HTMLElement, "No te comás la peli", 100);
     }, 4000);
     setTimeout(() => {
       text!.textContent = "";
