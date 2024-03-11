@@ -3,86 +3,97 @@ import BentoItem from "@components/BentoItem.astro";
 import img1 from "@assets/img1.webp";
 ---
 
-<section
-  class={`
+<main>
+  <h1
+    class="text-4xl font-semibold text-center text-wrap mx-auto tracking-wide uppercase"
+  >
+    Fotos
+  </h1>
+  <section
+    id="fotos"
+    class={`
     w-full max-w-[1400px]
     grid lg:grid-cols-10 auto-rows-[30rem] gap-4
     mx-auto p-6 md:p-12 lg:p-20
   `}
->
-  <BentoItem
-    class="col-span-10 lg:col-span-4"
-    title="El camino hacia la escena"
   >
-    <div
-      slot="image"
-      class="background transition-scale absolute bottom-0 left-0 top-0
+    <BentoItem
+      class="col-span-10 lg:col-span-4"
+      title="El camino hacia la escena"
+    >
+      <div
+        slot="image"
+        class="background transition-scale absolute bottom-0 left-0 top-0
         -z-10 h-full w-full bg-pink-primary/60
         bg-cover bg-center bg-no-repeat opacity-90 bg-blend-luminosity duration-1000 ease-in-out group-hover:scale-110"
-      style="background-image: url('/src/assets/img1.webp')"
-    >
-    </div>
+        style="background-image: url('/src/assets/img1.webp')"
+      >
+      </div>
 
-    <p
-      slot="content"
-      class="max-w-xl text-base md:text-lg"
-      set:html="El 𝙘𝙖𝙢𝙞𝙣𝙤 hacia la escena ✨ fue el nombre de la muestra de los adolescentes de @eltallercasadearte_Un grupo que iría a teatro de lunes a viernes en vez de ir a la escuela 😂💜Realmente el nombre indica lo que fue el proceso: un largo camino, lleno de amor, diversión, llanto, miedos, ansiedad, alegria, más llanto obvio y muuuucho trabajo 🐍💜Cómo no se quedan atrás, metieron TRES funciones y una fue más preciosa que la otra 💘 y la ROMPIERON!"
-    />
-  </BentoItem>
-  <BentoItem
-    class="col-span-10 lg:col-span-6"
-    title="Cuando el cuerpo escribe"
-    subtitle="Este grupo realizó tres funciones y el trabajo de escritura fue muuuuy intenso y prolongado."
-  >
-    <div
-      slot="image"
-      class="background transition-scale absolute bottom-0 left-0 top-0
+      <p
+        slot="content"
+        class="max-w-xl text-base md:text-lg"
+        set:html="El 𝙘𝙖𝙢𝙞𝙣𝙤 hacia la escena ✨ fue el nombre de la muestra de los adolescentes de @eltallercasadearte. Un grupo que iría a teatro de lunes a viernes en vez de ir a la escuela 😂💜"
+      />
+    </BentoItem>
+    <BentoItem
+      class="col-span-10 lg:col-span-6"
+      title="Cuando el cuerpo escribe"
+      subtitle="Sólo hay que dejarse llevar..."
+    >
+      <div
+        slot="image"
+        class="background transition-scale absolute bottom-0 left-0 top-0
     -z-10 h-full w-full bg-yellow-primary/60
     bg-cover bg-center bg-no-repeat opacity-90 bg-blend-luminosity duration-1000 ease-in-out group-hover:scale-110"
-      style="background-image: url('/src/assets/img2.webp')"
+        style="background-image: url('/src/assets/img2.webp')"
+      >
+      </div>
+      <p
+        slot="content"
+        class="max-w-xl text-base md:text-lg"
+        set:html="Este grupo realizó tres funciones y el trabajo de escritura fue muuuuy intenso y prolongado."
+      />
+    </BentoItem>
+    <BentoItem
+      class="col-span-10 lg:col-span-6"
+      title="Universos de cuerpo y letra"
+      subtitle="La muestra de taller de adoles del Teatro de Abadía"
     >
-    </div>
-    <p
-      slot="content"
-      class="max-w-xl text-base md:text-lg"
-      set:html="Contenido de prueba"
-    />
-  </BentoItem>
-  <BentoItem
-    class="col-span-10 lg:col-span-6"
-    title="Titulo prueba"
-    subtitle="Subtitulo de prueba"
-  >
-    <div
-      slot="image"
-      class="background transition-scale absolute bottom-0 left-0 top-0
+      <div
+        slot="image"
+        class="background transition-scale absolute bottom-0 left-0 top-0
         -z-10 h-full w-full bg-purple-primary/60
         bg-cover bg-center bg-no-repeat opacity-90 bg-blend-luminosity duration-1000 ease-in-out group-hover:scale-110"
-      style="background-image: url('/src/assets/img3.webp')"
+        style="background-image: url('/src/assets/img3.webp')"
+      >
+      </div>
+      <p
+        slot="content"
+        class="max-w-xl text-base md:text-lg"
+        set:html="En las dos funciones actuaron más de veinte adolescentes, mostrando escenas que partieron del trabajo con monólogos y con improvisación. Luego, se desarrollaron a partir de una construcción dramaturgica con el trabajo de los actores y se detallaron con las indicaciones de dirección."
+      />
+    </BentoItem>
+    <BentoItem
+      class="col-span-10 lg:col-span-4"
+      title="NOTECOMÁSLAPELI - Taller de cine y actuación frente a cámara para adolescentes 🎬"
     >
-    </div>
-    <p
-      slot="content"
-      class="max-w-xl text-base md:text-lg"
-      set:html="Contenido de prueba"
-    />
-  </BentoItem>
-  <BentoItem class="col-span-10 lg:col-span-4" title="Titulo prueba">
-    <div
-      slot="image"
-      class="background transition-scale absolute bottom-0 left-0 top-0
+      <div
+        slot="image"
+        class="background transition-scale absolute bottom-0 left-0 top-0
         -z-10 h-full w-full bg-orange-primary/60
         bg-cover bg-center bg-no-repeat opacity-90 bg-blend-luminosity duration-1000 ease-in-out group-hover:scale-110"
-      style="background-image: url('/src/assets/img4.webp')"
-    >
-    </div>
-    <p
-      slot="content"
-      class="max-w-xl text-base md:text-lg"
-      set:html="Contenido de prueba"
-    />
-  </BentoItem>
-</section>
+        style="background-image: url('/src/assets/img4.webp')"
+      >
+      </div>
+      <p
+        slot="content"
+        class="max-w-xl text-base md:text-lg"
+        set:html="Te mostramos otro de nuestros encuentros! Esta vez trabajamos sonido 🫶🏼🎤🎧 No podemos creer TODA la info que estamos recorriendo en cada clase, este seminario cada vez está más allá de nuestras expectativas 🤩 y eso es en gran parte por el grupo cebado que tenemos 😂"
+      />
+    </BentoItem>
+  </section>
+</main>
 
 <script>
   document.addEventListener("astro:page-load", () => {
