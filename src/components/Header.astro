@@ -25,9 +25,13 @@ import CloseIcon from "@icons/Close.astro";
       id="header-menu"
       class="fixed w-full h-dvh inset-0 bg-[#151a36]/90 md:text-xl lg:text-xl flex flex-col items-center justify-center gap-8 -translate-y-full transition-transform duration-300 target:translate-y-0 md:static md:h-[initial] md:bg-[initial] md:flex-row md:translate-y-[initial]"
     >
-      <HeaderLink class="text__glowing" href="/">Principal</HeaderLink>
-      <HeaderLink class="text__glowing" href="/">Historia</HeaderLink>
-      <HeaderLink class="text__glowing" href="/">Contacto</HeaderLink>
+      <HeaderLink class="text__glowing" href="#">Principal</HeaderLink>
+      <HeaderLink class="text__glowing" href="#quienes_somos">
+        ¿Quiénes somos?
+      </HeaderLink>
+      <HeaderLink class="text__glowing" href="#fotos">Fotos</HeaderLink>
+      <HeaderLink class="text__glowing" href="#horarios">Horarios</HeaderLink>
+      <HeaderLink class="text__glowing" href="#contacto">Contacto</HeaderLink>
       <Button
         className="md:py-2 md:ml-auto md:text-base lg:text-base"
         url="https://drive.google.com/file/d/1D7IvIqMyqAoG58fuk8bc0JvhAmrWBbOK/view"
@@ -41,23 +45,3 @@ import CloseIcon from "@icons/Close.astro";
     <a href="#header-menu" class="md:hidden"><MenuIcon /></a>
   </div>
 </header>
-
-<!-- <header
-  id="header"
-  class="flex items-center justify-between p-4 bg-purple-primary"
->
-  <img src="src/assets/logo.webp" alt="logo" class="w-24 h-24" />
-
-  <nav class="flex flex-grow justify-end">
-    <ul
-      class="flex items-center space-x-10 font-bold text-lg uppercase p-2 rounded-lg"
-    >
-      <li><a href="#" class="text-yellow-primary">Principal</a></li>
-      <li><a href="#">Quienes somos?</a></li>
-      <li><a href="#">Historia</a></li>
-      <li><a href="#">Actividades</a></li>
-      <li><a href="#">Otro</a></li>
-      <li><a href="#">Contacto</a></li>
-    </ul>
-  </nav>
-</header> -->
