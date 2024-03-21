@@ -3,4 +3,4 @@ import logo from "@assets/logo.webp";
 import { Image } from "astro:assets";
 ---
 
-<Image src={logo} alt="Logo" />
+<Image src={logo} alt="Logo" class={`${Astro.props.class}`} />
