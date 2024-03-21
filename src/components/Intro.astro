@@ -18,12 +18,14 @@ import Logo from "./Logo.astro";
   </header>
   <main class="flex">
     <div class="max-w-[70ch] min-w-[20ch]">
-      <Logo class="w-16 text-white m-auto" />
+      <Logo class="m-auto" />
     </div>
     <aside class="mr-6 flex items-center">
-      <p>
-        Inscribite a nuestro teatro y descubrí el poder de la transformación. A
-        través de la actuación, la danza y la música, te ayudamos a <strong
+      <p class="rounded-lg text-2xl p-5 mx-5 bg-black/50">
+        Inscribite a nuestro teatro y descubrí <strong class="text-pink_primary"
+          >el poder de la transformación.</strong
+        > A través de la actuación, la danza y la música, te ayudamos a <strong
+          class="text-yellow_primary"
           >liberar tu creatividad y a expresarte de una manera auténtica.</strong
         >
       </p>
@@ -49,6 +51,8 @@ import Logo from "./Logo.astro";
       }, delay);
     };
 
+    let intervalId: number | null = null;
+
     const Load = () => {
       text!.textContent = "";
       setTimeout(() => {
@@ -69,7 +73,37 @@ import Logo from "./Logo.astro";
       }, 7000);
     };
 
-    Load();
-    setInterval(Load, 12000);
+    const start = () => {
+      Load();
+      intervalId = setInterval(Load, 12000);
+    };
+
+    const stop = () => {
+      if (intervalId !== null) {
+        clearInterval(intervalId);
+        intervalId = null;
+      }
+    };
+
+    document.addEventListener("visibilitychange", () => {
+      if (document.hidden) {
+        stop();
+      } else {
+        start();
+      }
+    });
+
+    start();
+    // Load();
+    // setInterval(Load, 12000);
   </script>
 </section>
+
+<style>
+  .sec-text {
+    min-height: 2em;
+    text-align: center;
+    font-size: 1em;
+    font-weight: bold;
+  }
+</style>
