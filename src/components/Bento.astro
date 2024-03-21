@@ -1,19 +1,15 @@
 ---
 import BentoItem from "@components/BentoItem.astro";
-import img1 from "@assets/img1.webp";
-import img2 from "@assets/img2.webp";
-import img3 from "@assets/img3.webp";
-import img4 from "@assets/img4.webp";
 ---
 
-<main>
+<div id="fotos" class="anchor-div-navbar"></div>
+<main class="my-32">
   <h1
     class="text-4xl font-semibold text-center text-wrap mx-auto tracking-wide uppercase"
   >
     Fotos
   </h1>
   <section
-    id="fotos"
     class={`
     w-full max-w-[1400px]
     grid lg:grid-cols-10 auto-rows-[30rem] gap-4
@@ -29,7 +25,7 @@ import img4 from "@assets/img4.webp";
         class="background transition-scale absolute bottom-0 left-0 top-0
         -z-10 h-full w-full bg-pink-primary/60
         bg-cover bg-center bg-no-repeat opacity-90 bg-blend-luminosity duration-1000 ease-in-out group-hover:scale-110"
-        style={`background-image: ${img1}`}
+        style="background-image: url('/assets/img1.webp')"
       >
       </div>
 
@@ -49,7 +45,7 @@ import img4 from "@assets/img4.webp";
         class="background transition-scale absolute bottom-0 left-0 top-0
     -z-10 h-full w-full bg-yellow-primary/60
     bg-cover bg-center bg-no-repeat opacity-90 bg-blend-luminosity duration-1000 ease-in-out group-hover:scale-110"
-        style={`background-image: ${img2}`}
+        style="background-image: url('/assets/img2.webp')"
       >
       </div>
       <p
@@ -68,7 +64,7 @@ import img4 from "@assets/img4.webp";
         class="background transition-scale absolute bottom-0 left-0 top-0
         -z-10 h-full w-full bg-purple-primary/60
         bg-cover bg-center bg-no-repeat opacity-90 bg-blend-luminosity duration-1000 ease-in-out group-hover:scale-110"
-        style={`background-image: ${img3}`}
+        style="background-image: url('/assets/img3.webp')"
       >
       </div>
       <p
@@ -86,7 +82,7 @@ import img4 from "@assets/img4.webp";
         class="background transition-scale absolute bottom-0 left-0 top-0
         -z-10 h-full w-full bg-orange-primary/60
         bg-cover bg-center bg-no-repeat opacity-90 bg-blend-luminosity duration-1000 ease-in-out group-hover:scale-110"
-        style={`background-image: ${img4}`}
+        style="background-image: url('/assets/img4.webp')"
       >
       </div>
       <p
