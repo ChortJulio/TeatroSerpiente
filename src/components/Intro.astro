@@ -48,28 +48,39 @@ import Logo from "./Logo.astro";
           clearInterval(intervalId);
         }
       }, delay);
+      return intervalId;
     };
 
     let intervalId: number | null = null;
+    let typingIntervalId: number | null = null;
+    let timeoutIds: number[] = [];
 
     const Load = () => {
+      if (typingIntervalId !== null) {
+        clearInterval(typingIntervalId);
+      }
       text!.textContent = "";
-      setTimeout(() => {
-        text!.textContent = "";
-        typeText(text as HTMLElement, "¡Cambiá la piel!", 100);
-      }, 0);
-      setTimeout(() => {
-        text!.textContent = "";
-        typeText(text as HTMLElement, "No te comás la peli", 100);
-      }, 4000);
-      setTimeout(() => {
-        text!.textContent = "";
-        typeText(
-          text as HTMLElement,
-          "¡Descubrí el poder de la transformación!",
-          100
-        );
-      }, 7000);
+      typingIntervalId = typeText(text as HTMLElement, "¡Cambiá la piel!", 100);
+      timeoutIds.push(
+        setTimeout(() => {
+          text!.textContent = "";
+          typingIntervalId = typeText(
+            text as HTMLElement,
+            "¡No te comás la peli!",
+            100
+          );
+        }, 4000)
+      );
+      timeoutIds.push(
+        setTimeout(() => {
+          text!.textContent = "";
+          typingIntervalId = typeText(
+            text as HTMLElement,
+            "¡Descubrí el poder de la transformación!",
+            100
+          );
+        }, 7000)
+      );
     };
 
     const start = () => {
@@ -82,6 +93,15 @@ import Logo from "./Logo.astro";
         clearInterval(intervalId);
         intervalId = null;
       }
+      if (typingIntervalId !== null) {
+        clearInterval(typingIntervalId);
+        typingIntervalId = null;
+      }
+      for (const id of timeoutIds) {
+        clearTimeout(id);
+      }
+      timeoutIds = [];
+      text!.textContent = "";
     };
 
     document.addEventListener("visibilitychange", () => {
@@ -93,8 +113,6 @@ import Logo from "./Logo.astro";
     });
 
     start();
-    // Load();
-    // setInterval(Load, 12000);
   </script>
 </section>
 
