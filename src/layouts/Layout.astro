@@ -1,5 +1,5 @@
 ---
-import Header from "@components/Header.astro";
+import Header from "@components/NavBar.astro";
 import Footer from "@components/Footer.astro";
 import "@fontsource-variable/big-shoulders-text";
 import "@fontsource/poiret-one";
@@ -38,9 +38,25 @@ const { title, description } = Astro.props;
         TODO: Change color */
         font-family: "Big Shoulders Text Variable", sans-serif;
         /* background: #fffee7; */
-        background: url("../assets/test.jpg") repeat;
+        /* background: url("../assets/test.jpg") repeat;
         background-size: 4%;
-        background-attachment: fixed;
+        background-attachment: fixed; */
+
+        background: radial-gradient(
+            circle at bottom left,
+            rgba(239, 229, 42, 0.7) 35%,
+            transparent 36%
+          ),
+          radial-gradient(
+            circle at top right,
+            rgba(194, 107, 168, 0.7) 35%,
+            transparent 36%
+          );
+        background-size: 3em 3em;
+        background-color: rgba(137, 31, 118, 0.7);
+        opacity: 1;
+        color: white;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
       }
     </style>
   </body>
