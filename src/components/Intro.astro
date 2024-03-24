@@ -7,11 +7,11 @@ import Logo from "./Logo.astro";
 >
   <header class="flex flex-col">
     <h1
-      class="text-4xl font-semibold text-center text-wrap mx-auto mb-2 lg:mb-5 tracking-wide uppercase"
+      class="text-4xl font-bold text-center text-wrap mx-auto mb-2 lg:mb-5 tracking-wide uppercase"
     >
       Teatro Serpiente
     </h1>
-    <h2 class="sec-text text-2xl font-semibold text-center">
+    <h2 class="sec-text text-2xl min-h-10 font-bold text-center">
       ¡Cambiá la piel!
     </h2>
   </header>
@@ -20,9 +20,9 @@ import Logo from "./Logo.astro";
       <Logo class="m-auto" />
     </div>
     <aside class="mr-6 flex items-center">
-      <p class="rounded-lg text-2xl p-5 mx-5 bg-black/50">
-        Inscribite a nuestro teatro y descubrí <strong class="text-pink_primary"
-          >el poder de la transformación.</strong
+      <p class="rounded-lg text-2xl p-5 mx-5 bg-black/50 font-semibold">
+        Inscribite a nuestro teatro y descubrí <strong
+          class="text-yellow_primary">el poder de la transformación.</strong
         > A través de la actuación, la danza y la música, te ayudamos a <strong
           class="text-yellow_primary"
           >liberar tu creatividad y a expresarte de una manera auténtica.</strong
@@ -115,12 +115,3 @@ import Logo from "./Logo.astro";
     start();
   </script>
 </section>
-
-<style>
-  .sec-text {
-    min-height: 2em;
-    text-align: center;
-    font-size: 1em;
-    font-weight: bold;
-  }
-</style>
