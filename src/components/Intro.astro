@@ -69,7 +69,7 @@ import Logo from "./Logo.astro";
             "¡No te comás la peli!",
             100
           );
-        }, 4000)
+        }, 8000)
       );
       timeoutIds.push(
         setTimeout(() => {
@@ -79,13 +79,13 @@ import Logo from "./Logo.astro";
             "¡Descubrí el poder de la transformación!",
             100
           );
-        }, 7000)
+        }, 14000)
       );
     };
 
     const start = () => {
       Load();
-      intervalId = setInterval(Load, 12000);
+      intervalId = setInterval(Load, 24000);
     };
 
     const stop = () => {
