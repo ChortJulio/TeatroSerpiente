@@ -1,8 +1,12 @@
 <a name="readme-top"></a>
 
+# Teatro Serpiente - Landing Page
+
+> ¡Cambiá la piel!
+
 <div align="center">
  <a href="https://www.instagram.com/teatroserpiente/">
-    <img src="public/assets/logo.webp" alt="Instagram del Teatro Serpiente">
+    <img src="public/assets/logo.webp" alt="Instagram del Teatro Serpiente" width="400" height="400" >
   </a>
   
 ![Astro Badge](https://img.shields.io/badge/Astro-FF3E00?logo=astro&logoColor=fff&style=flat)
@@ -15,10 +19,6 @@
 [Reportar error](https://github.com/ChortJulio/TeatroSerpiente/issues) · [Ver Instagram](https://www.instagram.com/teatroserpiente/)
 
 </div>
-
-# Teatro Serpiente - Landing Page
-
-> ¡Cambiá la piel!
 
 Este repositorio contiene el código fuente de la landing page de **Teatro Serpiente**, un teatro independiente de la ciudad de Santa Fe.
 
